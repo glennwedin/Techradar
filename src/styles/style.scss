@@ -1,0 +1,340 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+@import "foundation";
+
+
+body{
+	margin: 0;
+	color: #ddd;
+	background-color: #111;
+	font-family: 'Roboto', sans-serif;
+	--paddingVar: calc(0.25 * 50vh);
+}
+
+h1, h2, h3{
+	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+}
+
+a{
+    &:hover{
+        color: #ddd;
+    }
+}
+
+.button{
+	border-radius: 5px;
+	font-size: 1.2em;
+	font-weight: 300;
+	padding: 0.5em 0.7em;
+}
+
+		/*Structure*/
+.layout{
+	padding: 0 3em;
+	margin: 0 auto 0;
+	overflow: auto;
+}
+
+.f-child{
+	flex: 1;
+}
+
+.tab{
+	width: 100%;
+	display: flex;
+	margin: 0em;
+}
+
+.tab-item{
+	background-color: #181818;
+    border-right: 1px solid #333;
+    color: #ddd;
+    cursor: pointer;
+    flex: 1 1 0;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 0.5em 1em;
+    text-align: left;
+    text-decoration: none;
+
+	&:last-child{
+		border-right: none;
+	}
+
+    &:hover{
+        background-color: #222;
+    }
+}
+
+.logobar {
+	background-color: #000;
+    border-bottom: 1px solid #333;
+    font-size: 1.6em;
+    font-weight: 200;
+    padding: 0.4em 4rem;
+    text-align: left;
+}
+
+.ccolor{
+    color: #66C6E7;
+}
+.cweight{
+    font-weight: 600;
+}
+
+input[type="text"],input[type="password"] {
+	background-color: #222;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 0 1px 0 #6e6e6e inset;
+    color: #ddd;
+    font-size: 1.2em;
+    padding: 0.4em 0.7em;
+    font-weight: 300;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+
+    &:focus{
+    	background-color: #333;
+    	box-shadow: none;
+    }
+}
+
+select{
+	background-color: #222;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 0 1px 0 #6e6e6e inset;
+    font-size: 1.2em;
+    padding: 0.4em 0.7em;
+    color:#ddd;
+    font-weight: 300;
+    option{
+    	color:#ddd;
+    	border:none;
+    }
+}
+
+textarea{
+	background-color: #222;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 0 1px 0 #6e6e6e inset;
+    font-size: 1.2em;
+    color: #ddd;
+    font-weight: 300;
+    padding: 0.4em 0.7em;
+    height: 200px;
+    &:focus{
+    	background-color: #333;
+    	box-shadow: none;
+    }
+
+}
+
+
+.searchResults{
+	margin: 1em 0;
+	height: 500px;
+	overflow: auto;
+	position: relative;
+
+	> div{
+		background-color: #222;
+	    border-bottom: 1px solid #1a1a1a;
+	    box-shadow: 0 -1px 0 #272727 inset;
+	    clear: both;
+	    overflow: auto;
+	    padding: 0.5em 1em 0.5em;
+	    font-weight: 300;
+
+	    &:hover{
+	    	background-color: #252525;
+	    }
+	}
+
+	.avatar {
+	    float: left;
+	    padding: 0 1em 0 0;
+	}
+
+	.name{
+		float: left;
+		padding: 0.5em 0;
+	}
+
+	.ion-drag{
+		font-size: 1em;
+		float: right;
+		cursor: pointer;
+		color:#ccc;
+
+		ul {
+		    background-color: #000;
+		    list-style: outside none none;
+		    margin: 0;
+		    padding: 0;
+		    position: absolute;
+		    right: 15px;
+		    margin-top: -4px;
+		}
+		li{
+			padding: 0.3em 1em;
+    		text-align: center;
+    		&:hover{
+    			background-color: #111;
+    		}
+		}
+	}
+}
+
+/*RADAR*/
+.radarwrap {
+    background-color:blue;
+    width:100vh; /* You can define it by % also */
+    height:100vh; /* You can define it by % also */
+    position:relative;
+    /*border:1px solid black;*/
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.right{
+	float: right;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.c{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7feff+0,c4c4c4+100 */
+	background-color: #111;
+    border-left: 1px solid #8b8b8b;
+    border-radius: 2000px;
+    height: 800px;
+    padding: 0 0 0 10rem;
+    position: absolute;
+    width: 800px;
+    transition: padding .3s ease-out;
+    cursor: pointer;
+}
+.c.selected{
+	//background-color: #333;
+	transition: padding .3s ease-out;
+	padding: 0 0 0 15rem;
+}
+
+.signin {
+	position: fixed;
+	top:0;
+	left:0;
+	padding: 3em 0;
+	width:100%;
+	height: 100%;
+	background-color:#222;
+	z-index: 1;
+
+	form{
+		margin-top: 30%;
+	}
+	.title {
+	    font-size: 2em;
+	    font-weight: 200;
+	    margin: 0 0 0.6em;
+	}
+}
+
+.selected > .techItems {
+    .techitem {
+        opacity: 1;
+    }
+}
+
+.techItems {
+    display: inline-block;
+    left: 8%;
+    position: absolute;
+    top: 22%;
+    width: 25%;
+    height: 400px;
+    text-align: center;
+
+    .title{
+    	font-size: 1.2em;
+    	font-weight: 300;
+    }
+}
+
+.techitem {
+    background-color: #333;
+    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    margin: 5px;
+    font-weight: 300;
+	display:inline-block;
+	opacity: 0.3;
+    transition: opacity .3s linear;
+	.close{
+		height: 0;
+		overflow: hidden;
+		transition: height .3s ease-out;
+	}
+
+    &:hover{
+    	background-color: #444;
+        opacity: 1;
+    	.close{
+			height: 20px;
+			overflow: hidden;
+			//transition: height .3s ease-out;
+		}
+    }
+}
+
+.lightbox {
+    background-color: #000;
+    font-size: 0.8em;
+    height: 300px;
+    left: 0;
+    padding: 1em 2em;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 300px;
+	z-index: 1;
+	border: 1px solid #222222;
+	border-right:none;
+	border-bottom:none;
+
+    .ion-close{
+    	float: right;
+    	opacity: 0.4;
+    	padding: 0.5em;
+    	&:hover{
+    		opacity: 1;
+    	}
+    }
+    .title {
+	    font-size: 2em;
+	    font-weight: 200;
+	    margin: 0 0 0.6em;
+	}
+}
+
+.sharelink {
+    color: #ddd;
+    float: right;
+    font-size: 1.4em;
+    line-height: 1;
+    &:hover{
+        color: #66c6e7;
+    }
+}
+
+
+#additem{
+    .button{
+        border:0;
+        background-color: #222;
+    }
+}
