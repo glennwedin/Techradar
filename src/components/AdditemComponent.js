@@ -64,7 +64,7 @@ class AdditemComponent extends React.Component{
 				</div>
 				<div className="medium-7 columns">
 					<div className="right">
-						<div className="c _1">
+						<div className="c _1 selected">
 							<TechitemsComponent type="hold" user={this.props.user.user} />
 							<div className="c _2">
 								<TechitemsComponent type="assess" user={this.props.user.user} />
